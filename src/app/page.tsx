@@ -1,5 +1,7 @@
 export default function Home() {
-  return (
-    <div>asdf</div>
-  );
+    return (
+        <>
+            <div>123</div>
+        </>
+    );
 }

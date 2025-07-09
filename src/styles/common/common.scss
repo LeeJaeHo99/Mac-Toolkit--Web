@@ -1,0 +1,13 @@
+@use './color' as *;
+
+*{
+    color: $black;
+}
+
+.inner{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
