@@ -1,12 +1,49 @@
+@use '../common/color' as *;
+
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 80px;
+    height: 64px;
 
     .inner{
         align-items: center;
+        justify-content: space-between;
 
         .logo{
-            
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            width: 20%;
+
+            h1{
+                font-family: 'B';
+                font-size: 24px;
+            }
+        }
+        nav{
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 20px;
+
+                li{
+                    a{
+                        font-family: 'L';
+                        font-size: 18px;
+                        color: $black;
+                    }
+                }
+            }
+        }
+        .btn-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 20%;
         }
     }
 }

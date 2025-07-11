@@ -1,0 +1,16 @@
+@use '../common/color' as *;
+
+.button-ui{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.login{
+    background-color: $blue;
+    font-family: 'L';
+    font-size: 14px;
+    color: $white;
+}

@@ -1,0 +1,23 @@
+@use '../common/color' as *;
+
+.home{
+    .inner{
+        justify-content: center;
+
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            
+            h2, h3{
+                font-family: 'B';
+                font-size: 64px;
+            }
+            h2{
+                color: $black;
+            }
+        }
+    }
+}
