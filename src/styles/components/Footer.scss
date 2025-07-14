@@ -1,0 +1,37 @@
+@use '../common/color' as *;
+
+footer {
+    width: 100%;
+    padding: 120px 0px 60px;
+    background-color: #f5f5f5;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+
+    .inner{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 100px;
+    }
+    .footer-content{
+        h4{
+            font-family: 'B';
+            font-size: 28px;
+            color: $black;
+        }
+        ul{
+            margin-top: 24px;
+
+            li{
+                margin-bottom: 16px;
+                font-family: 'L';
+                font-size: 24px;
+                color: $gray;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
