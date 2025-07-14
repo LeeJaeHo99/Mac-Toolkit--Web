@@ -1,0 +1,103 @@
+export const reviewTop = [
+    {
+        id: 1,
+        name: "Jane",
+        photo: '/images/profile/1.png',
+        rating: 5,
+        text: "너무 유용하고 디자인도 좋아요.",
+    },
+    {
+        id: 2,
+        name: "Tom",
+        photo: '/images/profile/2.png',
+        rating: 4,
+        text: "가볍고 빠른 앱이라 자주 써요.",
+    },
+    {
+        id: 3,
+        name: "Mina",
+        photo: '/images/profile/3.png',
+        rating: 5,
+        text: "이런 툴이 필요했어요!",
+    },
+    {
+        id: 4,
+        name: "Eric",
+        photo: '/images/profile/4.png',
+        rating: 4,
+        text: "개발자분 감사합니다 😊",
+    },
+    {
+        id: 5,
+        name: "Jisoo",
+        photo: '/images/profile/5.png',
+        rating: 5,
+        text: "매일 사용하고 있어요!",
+    },
+    {
+        id: 6,
+        name: "Jisoo",
+        photo: '/images/profile/6.png',
+        rating: 5,
+        text: "매일 사용하고 있어요!",
+    },
+    {
+        id: 7,
+        name: "Jisoo",
+        photo: '/images/profile/7.png',
+        rating: 5,
+        text: "매일 사용하고 있어요!",
+    },
+];
+
+export const reviewBot = [
+    {
+        id: 1,
+        name: "Jane",
+        photo: '/images/profile/1.png',
+        rating: 5,
+        text: "1",
+    },
+    {
+        id: 2,
+        name: "Tom",
+        photo: '/images/profile/2.png',
+        rating: 4,
+        text: "2",
+    },
+    {
+        id: 3,
+        name: "Mina",
+        photo: '/images/profile/3.png',
+        rating: 5,
+        text: "3",
+    },
+    {
+        id: 4,
+        name: "Eric",
+        photo: '/images/profile/4.png',
+        rating: 4,
+        text: "4",
+    },
+    {
+        id: 5,
+        name: "Jisoo",
+        photo: '/images/profile/5.png',
+        rating: 5,
+        text: "5",
+    },
+    {
+        id: 6,
+        name: "Jisoo",
+        photo: '/images/profile/6.png',
+        rating: 5,
+        text: "6",
+    },
+    {
+        id: 7,
+        name: "Jisoo",
+        photo: '/images/profile/7.png',
+        rating: 5,
+        text: "7",
+    },
+];

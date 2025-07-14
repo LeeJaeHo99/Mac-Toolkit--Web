@@ -1,10 +1,10 @@
-@use './color' as *;
+@use "./color" as *;
 
-*{
+* {
     color: $black;
 }
 
-.inner{
+.inner {
     display: flex;
     width: 100%;
     max-width: 1200px;
@@ -12,18 +12,42 @@
     margin: 0 auto;
 }
 
-.blur-box{
+.blur-box {
     background-color: rgb(255 255 255 / 75%);
     backdrop-filter: blur(4px);
     box-shadow: 0 0 20px 8px rgb(148 132 132 / 19%);
 }
 
-.text-gradient{
-    background: linear-gradient(135deg, #b0e3ff, #c8b4ff, #eaa5dc, #ffc9a8);
+.text-gradient {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(
+        270deg,
+        #b0e3ff,
+        #c8b4ff,
+        #eaa5dc,
+        #ffc9a8,
+        #b0e3ff
+    );
+    background-size: 800% 800%;
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
+    animation: gradientMove 10s ease infinite;
 }
 
-.page{
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.page {
     margin-top: 64px;
 }

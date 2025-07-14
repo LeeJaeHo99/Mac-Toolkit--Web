@@ -1,0 +1,42 @@
+@use '../common/color' as *;
+
+.content-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+    background-image: url('/images/bg/fire.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    filter: grayscale(50%);
+
+    .inner{
+        padding: 24px;
+
+        .text-wrap{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 12px;
+    
+            h3{
+                font-family: 'B';
+                font-size: 40px;
+                text-align: center;
+                color: $white;
+            }
+            p{
+                font-family: 'B';
+                font-size: 40px;
+                color: $gray;
+            }
+        }
+    }
+}
+
+// https://www.pexels.com/ko-kr/photo/7135121/

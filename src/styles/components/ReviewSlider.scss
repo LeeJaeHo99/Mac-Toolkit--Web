@@ -1,0 +1,77 @@
+.review-slider {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+
+    .row {
+        display: flex;
+        width: max-content;
+        gap: 20px;
+        padding: 10px 0;
+
+        &-top {
+            animation: slide-right 40s linear infinite;
+        }
+        
+        &-bottom {
+            animation: slide-left 40s linear infinite;
+        }
+        .review-card {
+            width: 260px;
+            height: 140px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 0px 10px rgb(0 0 0 / 5%);
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-shrink: 0;
+
+            .card-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            
+                .profile-wrapper {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    .profile {
+                        object-fit: cover;
+                    }
+                }
+                .stars {
+                    color: gold;
+                    font-size: 14px;
+                }
+            }
+            .card-text {
+                font-size: 14px;
+                color: #333;
+                margin-top: 8px;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

@@ -1,10 +1,12 @@
 @use '../common/color' as *;
 
 .home{
+    padding-bottom: 100px;
     .inner{
         flex-direction: column;
         justify-content: center;
-        padding-top: 100px;
+        padding-top: 80px;
+
 
         .title{
             display: flex;
@@ -28,7 +30,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
 
             .button-ui{
                 padding: 10px 14px;
@@ -45,13 +47,6 @@
                     color: $gray;
                     border: 1px solid $gray;
                 }
-            }
-        }
-        .text-wrap{
-            h3{
-                font-family: 'L';
-                font-size: 40px;
-                text-align: center;
             }
         }
     }
