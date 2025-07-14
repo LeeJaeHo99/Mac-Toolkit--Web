@@ -2,7 +2,8 @@ import Title from "@/components/Title";
 import ReviewSlider from "@/components/ReviewSlider";
 import Button from "@/ui/Button";
 import TextContent from "@/components/TextContent";
-import VideoContent from "@/components/VideoContent";
+import MacContent from "@/components/MacContent";
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -15,28 +16,15 @@ export default function Home() {
                 </div>
             </div>
             <ReviewSlider />
+            <MacContent />
             <TextContent bg="3">
                 <div className="text-wrap">
-                    <h3>Speed Up 🔥</h3>
-                    <p>sdfmlkmslfmalskmfal</p>
-                    <p>sdfmlkmslfmals</p>
+                    <h3>Again New 🔥</h3>
+                    <p>If Your Mac is Old?</p>
+                    <p>We Can Make It New Again</p>
                 </div>
+                <Image src="/images/apple.png" alt="mac" width={900} height={360} />
             </TextContent>
-            <VideoContent />
-            <TextContent bg="1">
-                <div className="text-wrap">
-                    <h3>Battery Up 🔋</h3>
-                    <p>sdfmlkmslfmalskmfal</p>
-                    <p>sdfmlkmslfmals</p>
-                </div>
-            </TextContent>
-            {/* <Content bg="4">
-                <div className="text-wrap">
-                    <h3>Capacity Up 🖥️</h3>
-                    <p>sdfmlkmslfmalskmfal</p>
-                    <p>sdfmlkmslfmals</p>
-                </div>
-            </Content> */}
         </div>
     );
 }
