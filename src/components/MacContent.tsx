@@ -5,7 +5,7 @@ export default function MacContent() {
     return (
         <div className="mac-content-wrap">
             <div className="inner">
-                <Image src="/images/mac-mock.png" alt="mac" width={560} height={560} />
+                <Image src="/images/apple_2.png" alt="mac" width={520} height={320} />
                 <div className="text-wrap">
                     <h4>The Most Efficient</h4>
                     <p>For Every one</p>
