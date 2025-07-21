@@ -1,12 +1,10 @@
 @use './common/reset.scss';
-@use './common/fonts.scss';
 @use './common/common.scss';
 
 @use './components/Header.scss';
-@use './components/ReviewSlider.scss';
-@use './components/Content.scss';
 @use './components/Footer.scss';
-@use './components/Product.scss';
+@use './components/ReviewSlider.scss';
+@use './components/Title.scss';
 
 @use './ui/Button.scss';
 

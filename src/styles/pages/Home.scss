@@ -6,26 +6,8 @@
     > .inner{
         flex-direction: column;
         justify-content: center;
-        padding-top: 80px;
 
 
-        .title{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 4px;
-            margin-bottom: 40px;
-            
-            h2, h3{
-                font-family: 'B';
-                font-size: 56px;
-            }
-            h2{
-                color: $black;
-                font-size: 64px;
-            }
-        }
         .btn-wrap{
             display: flex;
             align-items: center;
@@ -40,13 +22,13 @@
                 font-size: 16px;
 
                 &:first-child{
-                    background-color: $blue;
-                    color: $white;
+                    background-color: $accent-blue;
+                    color: $text-P;
                 }
                 &:last-child{
-                    background-color: $white;
-                    color: $gray;
-                    border: 1px solid $gray;
+                    background-color: $text-P;
+                    color: $accent-red__hover;
+                    border: 1px solid $border-P;
                 }
             }
         }

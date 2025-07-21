@@ -1,9 +1,7 @@
 import Title from "@/components/Title";
 import ReviewSlider from "@/components/ReviewSlider";
 import Button from "@/ui/Button";
-import TextContent from "@/components/TextContent";
-import MacContent from "@/components/MacContent";
-import Product from "@/components/Product";
+import SubTitle from "@/components/SubTitle";
 
 export default function Home() {
     return (
@@ -11,21 +9,16 @@ export default function Home() {
             <div className="inner">
                 <Title />
                 <div className="btn-wrap">
-                    <Button text="NodeNode" />
-                    <Button text="NodeNode" />
+                    <Button text="Download" className="download" />
+                    <Button text="Support" className="support" />
                 </div>
             </div>
             <ReviewSlider />
-            <MacContent />
-            <TextContent bg="3">
-                <div className="text-wrap">
-                    <h3>Again New</h3>
-                    <p>If Your Mac is Old?</p>
-                    <p>We Can Make It New Again!</p>
+            <section className="fast-broswer">
+                <div className="inner">
+                    <SubTitle title="Want to Jump to" subTitle="The Site Quickly" />
                 </div>
-                <div className="icon-wrap">🖥️</div>
-            </TextContent>
-            <Product />
+            </section>
         </div>
     );
 }

@@ -1,12 +1,10 @@
 @use '../common/color' as *;
 
 header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
     width: 100%;
     height: 64px;
+    background-color: $bg-S;
+    box-shadow: 0 0 10px $shadow-H;
 
     .inner{
         align-items: center;
@@ -20,8 +18,9 @@ header{
             width: 20%;
 
             h1{
-                font-family: 'B';
                 font-size: 24px;
+                font-weight: 600;
+                color: $text-P;
             }
         }
         nav{
@@ -33,9 +32,9 @@ header{
 
                 li{
                     a{
-                        font-family: 'L';
                         font-size: 18px;
-                        color: $black;
+                        color: $text-P;
+                        font-weight: 400;
                     }
                 }
             }

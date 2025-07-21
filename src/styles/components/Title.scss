@@ -1,0 +1,37 @@
+@use '../common/color' as *;
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 40px;
+    
+    h2, h3{
+        font-size: 56px;
+        font-weight: 600;
+    }
+    h2{
+        color: $text-P;
+        font-size: 64px;
+    }
+}
+
+.sub-title{
+    line-height: 1.2;
+    
+    h2, h3{
+        font-size: 52px;
+        font-weight: 700;
+    }
+    h3{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        svg{
+            color: $accent-yellow;
+        }
+    }
+}
