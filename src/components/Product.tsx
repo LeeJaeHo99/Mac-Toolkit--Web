@@ -5,14 +5,9 @@ import { CircleQuestionMark, Hand, Layers2, Youtube } from "lucide-react";
 import Image from "next/image";
 import Button from "@/ui/Button";
 import AppleWindow from "./AppleWindow";
+import { ProductProps } from "@/types/props";
 
-interface ProductProps {
-    name: string;
-    text: string;
-    headerList: string[];
-    bodyList: string[][];
-    youtubeUrl: string;
-}
+
 
 export default function Product({
     name,
@@ -20,6 +15,7 @@ export default function Product({
     headerList,
     bodyList,
     youtubeUrl,
+    questionList,
 }: ProductProps) {
     const [activeTab, setActiveTab] = useState(0);
     const handleActiveTab = (tab: number) => {
@@ -92,6 +88,7 @@ export default function Product({
                     headerList={headerList}
                     bodyList={bodyList}
                     youtubeUrl={youtubeUrl}
+                    questionList={questionList}
                     handleCloseActiveTab={handleCloseActiveTab}
                 />
             )}

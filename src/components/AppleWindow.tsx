@@ -1,18 +1,15 @@
 import Table from "./Table";
+import Question from "./Question";
+import { AppleWindowProps, AppleWindowItemProps } from "@/types/props";
 
-interface AppleWindowProps {
-    activeTab: number;
-    headerList: string[];
-    bodyList: string[][];
-    youtubeUrl: string;
-    handleCloseActiveTab: () => void;
-}
+
 
 export default function AppleWindow({
     activeTab,
     headerList,
     bodyList,
     youtubeUrl,
+    questionList,
     handleCloseActiveTab,
 }: AppleWindowProps) {
     return (
@@ -28,6 +25,7 @@ export default function AppleWindow({
                     headerList={headerList}
                     bodyList={bodyList}
                     youtubeUrl={youtubeUrl}
+                    questionList={questionList}
                 />
             </div>
         </div>
@@ -39,12 +37,8 @@ function AppleWindowItem({
     headerList,
     bodyList,
     youtubeUrl,
-}: {
-    activeTab: number;
-    headerList: string[];
-    bodyList: string[][];
-    youtubeUrl: string;
-}) {
+    questionList,
+}: AppleWindowItemProps) {
     return (
         <div className="apple-window-body-item">
             {activeTab === 0 && <div>How to use</div>}
@@ -60,7 +54,7 @@ function AppleWindowItem({
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 />
             )}
-            {activeTab === 3 && <div>FAQ</div>}
+            {activeTab === 3 && <Question questionList={questionList} />}
         </div>
     );
 }
