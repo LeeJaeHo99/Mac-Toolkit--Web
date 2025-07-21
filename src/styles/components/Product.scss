@@ -1,0 +1,93 @@
+@use "../common/color" as *;
+
+.product {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid $border-S;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 56px;
+
+        .discription {
+            .name {
+                margin-bottom: 8px;
+                font-size: 28px;
+                font-weight: 600;
+                color: $text-P;
+            }
+            .text {
+                margin-bottom: 28px;
+                font-size: 20px;
+                font-weight: 300;
+                color: $text-S;
+            }
+            .download {
+                max-width: 100px;
+                background-color: $accent-blue;
+                color: $text-P;
+            }
+        }
+    }
+    .btn-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        width: 100%;
+        margin-bottom: 40px;
+
+        .content-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 140px;
+            min-width: 140px;
+            height: auto;
+            height: 0;
+            min-height: 100px;
+            max-height: 100px;
+            padding: 16px;
+            background-color: transparent;
+            border-radius: 8px;
+            border: 2px solid $border-S;
+            font-size: 18px;
+            font-weight: 600;
+            color: $text-S;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            svg{
+                color: $text-S;
+                transition: all 0.3s ease;
+            }
+            &:hover{
+                background-color: $accent-blue__hover;
+                color: $text-P;
+                
+                svg{
+                    color: $text-P;
+                }
+            }
+            &.selected{
+                background-color: $accent-blue;
+                border: 2px solid $accent-blue__hover;
+                color: $text-P;
+
+                svg{
+                    color: $text-P;
+                }
+            }
+        }
+    }
+    .apple-window{
+        padding-bottom: 48px;
+    }
+}

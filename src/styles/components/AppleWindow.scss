@@ -1,0 +1,90 @@
+@use '../common/color' as *;
+
+.apple-window{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    &-header{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
+        height: 40px;
+        padding-left: 16px;
+        background-color: #191919;
+        border: 1px solid $border-P;
+        border-bottom: none;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+
+        > div{
+            position: relative;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+            &.r{
+                background-color: #ff5750;
+
+                &::before{
+                    background-color: #9d3632;
+                }
+            }
+            &.y{
+                background-color: #FFB33A;
+
+                &::before{
+                    background-color: #9b6d22;
+                }
+            }
+            &.g{
+                background-color: #00BF43;
+
+                &::before{
+                    background-color: #007529;
+                }
+            }
+            &:hover{
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-body{
+        width: 100%;
+        height: auto;
+        padding: 20px 16px;
+        background-color: $bg-E;
+        border: 1px solid $border-P;
+        border-top: none;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+
+        &-item{
+            width: 100%;
+            height: auto;
+
+            iframe{
+                min-height: 400px;
+            }
+        }
+    }
+}
