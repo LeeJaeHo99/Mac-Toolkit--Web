@@ -5,6 +5,11 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Mac Toolkit",
   description: "Mac Toolkit",
+  icons: {
+    icon: "/icons/logo.ico",
+    shortcut: "/icons/logo.ico",
+    apple: "/icons/logo.ico",
+},
 };
 
 export default function RootLayout({
