@@ -6,7 +6,7 @@ import { PreviewProps } from "@/types/props";
 
 export default function Preview({
     textList,
-    gitUrl,
+    gifUrl,
 }: PreviewProps) {
     const [previewList, setPreviewList] = useState<string[]>([]);
 
@@ -21,7 +21,7 @@ export default function Preview({
                     <p className="preview-text">
                         {text}
                     </p>
-                    <Image src={`/images/preview/${gitUrl}/${index + 1}.gif`} alt="preview" width={960} height={360} />
+                    <Image src={`/images/preview/${gifUrl}/${index + 1}.gif`} alt="preview" width={960} height={360} />
                 </div>
             ))}
         </div>

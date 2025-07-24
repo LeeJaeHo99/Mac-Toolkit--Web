@@ -12,6 +12,7 @@ export default function AppleWindow({
     textList,
     gifUrl,
     review,
+    star,
     handleCloseActiveTab,
 }: AppleWindowProps) {
     return (
@@ -30,6 +31,7 @@ export default function AppleWindow({
                     textList={textList}
                     gifUrl={gifUrl}
                     review={review}
+                    star={star}
                 />
             </div>
         </div>
@@ -44,6 +46,7 @@ function AppleWindowItem({
     textList,
     gifUrl,
     review,
+    star,
 }: AppleWindowItemProps) {
     return (
         <div className="apple-window-body-item">
@@ -52,7 +55,7 @@ function AppleWindowItem({
                 <Table headerList={headerList} bodyList={bodyList} />
             )}
             {activeTab === 2 && <Question questionList={questionList} />}
-            {activeTab === 3 && <Review review={review} />}
+            {activeTab === 3 && <Review review={review} star={star} />}
         </div>
     );
 }

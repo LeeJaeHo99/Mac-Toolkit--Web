@@ -51,5 +51,72 @@
                 }
             }
         }
+        .review-tab{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
+            padding: 24px;
+            padding-top: 0;
+
+            .write-review{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 16px;
+                width: 100%;
+
+                select{
+                    width: 110px;
+                    padding: 8px;
+                    background-color: $bg-T;
+                    border-radius: 6px;
+                    border: 1px solid $border-P;
+                    color: $text-S;
+                    outline: none;
+
+                    option{
+                        color: $accent-yellow;
+                    }
+                }
+                input{
+                    width: 80%;
+                    height: 40px;
+                    padding: 8px;
+                    background-color: $bg-T;
+                    border: 1px solid $border-P;
+                    border-radius: 6px;
+                    outline: none;
+                    color: $text-S;
+
+                    &::placeholder{
+                        color: $text-S;
+                    }
+                }
+                &-btn{
+                    width: 40px;
+                    min-height: 40px;
+                    height: 40px;
+                    background-color: $bg-T;
+                    border-radius: 6px;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: $accent-blue__hover;
+                    }
+                }
+            }
+            .row{
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                
+                .review-card{
+                    background-color: $border-S;
+                }
+            }
+        }
     }
 }

@@ -25,6 +25,7 @@ export interface AppleWindowProps {
         text: string;
         star: number;
     }[];
+    star: string;
     handleCloseActiveTab: () => void;
 }
 
@@ -59,4 +60,5 @@ export interface ReviewProps {
         text: string;
         star: number;
     }[];
+    star: string;
 }

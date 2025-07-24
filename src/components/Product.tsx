@@ -19,7 +19,6 @@ export default function Product({
     review,
     download,
 }: ProductProps) {
-    console.log("review: ", review);
     const [activeTab, setActiveTab] = useState(-1);
     const handleActiveTab = (tab: number) => {
         if (activeTab === tab) {
@@ -126,6 +125,7 @@ export default function Product({
                     textList={textList}
                     gifUrl={gifUrl}
                     review={review}
+                    star={star}
                     handleCloseActiveTab={handleCloseActiveTab}
                 />
             )}
