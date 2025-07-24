@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header className="blur-box">
+        <header>
             <div className="inner">
                 <Link href="/" className="logo">
                     <Image
