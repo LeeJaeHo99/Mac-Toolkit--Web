@@ -1,15 +1,17 @@
+import { AppleWindowProps, AppleWindowItemProps } from "@/types/props";
 import Table from "./Table";
 import Question from "./Question";
-import { AppleWindowProps, AppleWindowItemProps } from "@/types/props";
-
-
+import Preview from "./Preview";
+import Review from "./Review";
 
 export default function AppleWindow({
     activeTab,
     headerList,
     bodyList,
-    youtubeUrl,
     questionList,
+    textList,
+    gifUrl,
+    review,
     handleCloseActiveTab,
 }: AppleWindowProps) {
     return (
@@ -24,8 +26,10 @@ export default function AppleWindow({
                     activeTab={activeTab}
                     headerList={headerList}
                     bodyList={bodyList}
-                    youtubeUrl={youtubeUrl}
                     questionList={questionList}
+                    textList={textList}
+                    gifUrl={gifUrl}
+                    review={review}
                 />
             </div>
         </div>
@@ -36,25 +40,19 @@ function AppleWindowItem({
     activeTab,
     headerList,
     bodyList,
-    youtubeUrl,
     questionList,
+    textList,
+    gifUrl,
+    review,
 }: AppleWindowItemProps) {
     return (
         <div className="apple-window-body-item">
-            {activeTab === 0 && <div>Preview</div>}
+            {activeTab === 0 && <Preview textList={textList} gifUrl={gifUrl} />}
             {activeTab === 1 && (
                 <Table headerList={headerList} bodyList={bodyList} />
             )}
-            {activeTab === 2 && (
-                <iframe
-                    width="100%"
-                    height="100%"
-                    src={youtubeUrl}
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                />
-            )}
-            {activeTab === 3 && <Question questionList={questionList} />}
+            {activeTab === 2 && <Question questionList={questionList} />}
+            {activeTab === 3 && <Review review={review} />}
         </div>
     );
 }

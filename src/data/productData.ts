@@ -37,7 +37,12 @@ export const FAST_BROWSER__BODY_LIST = [
         answer: "⌘ + 6"
     }
 ];
-export const FAST_BROWSER__YOUTUBE_URL = "https://www.youtube.com/embed/QdxQZfC70eg?si=L2gqq_m6SBCGivqi";
+export const FAST_BROWSER__TEXT_LIST = [
+    `Just click the menu bar icon to bring up the window.`,
+    'Hit the “Add Link” button to quickly save a URL.',
+    'Want to open a link? Just click it — it’ll launch right in your default browser.',
+    'Need to clean things up? Tap “Delete Link” to remove anything you no longer need.'
+];
 export const FAST_BROWSER__QUESTION_LIST = [
     {
         title: "Can I change the keyboard shortcuts?",

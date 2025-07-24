@@ -18,8 +18,13 @@ export interface AppleWindowProps {
         title: string;
         answer: string;
     }[];
-    youtubeUrl: string;
     questionList: QuestionProps[];
+    textList: string[];
+    gifUrl: string;
+    review: {
+        text: string;
+        star: number;
+    }[];
     handleCloseActiveTab: () => void;
 }
 
@@ -34,6 +39,24 @@ export interface ProductProps {
         title: string;
         answer: string;
     }[];
-    youtubeUrl: string;
     questionList: QuestionProps[];
+    textList: string[];
+    gifUrl: string;
+    review: {
+        text: string;
+        star: number;
+    }[];
+    download: number;
+}
+
+export interface PreviewProps {
+    textList: string[];
+    gifUrl: string;
+}
+
+export interface ReviewProps {
+    review: {
+        text: string;
+        star: number;
+    }[];
 }
