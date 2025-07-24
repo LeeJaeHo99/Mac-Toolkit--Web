@@ -55,7 +55,7 @@ function AppleWindowItem({
                 <Table headerList={headerList} bodyList={bodyList} />
             )}
             {activeTab === 2 && <Question questionList={questionList} />}
-            {activeTab === 3 && <Review review={review} star={star} />}
+            {activeTab === 3 && <Review review={review} star={star} gifUrl={gifUrl}/>}
         </div>
     );
 }

@@ -15,7 +15,9 @@
     color: $text-P;
 }
 
-.support{
+button.support{
+    transition: all 0.3s ease;
+
     svg{
         margin-left: 4px;
     }

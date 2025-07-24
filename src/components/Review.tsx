@@ -5,13 +5,14 @@ import Image from "next/image";
 import { ReviewProps } from "@/types/props";
 import { Send } from "lucide-react";
 
-export default function Review({ review, star }: ReviewProps) {
+export default function Review({ review, star, gifUrl }: ReviewProps) {
     const reviewTextRef = useRef<HTMLInputElement>(null);
     const reviewStarRef = useRef<HTMLSelectElement>(null);
-
+    
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(reviewTextRef.current?.value, reviewStarRef.current?.value);
+        console.log('gifUrl: ', gifUrl);
     };
 
     return (

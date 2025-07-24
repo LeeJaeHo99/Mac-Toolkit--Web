@@ -48,6 +48,7 @@ export interface ProductProps {
         star: number;
     }[];
     download: number;
+    handleDownload: () => void;
 }
 
 export interface PreviewProps {
@@ -61,4 +62,5 @@ export interface ReviewProps {
         star: number;
     }[];
     star: string;
+    gifUrl: string;
 }

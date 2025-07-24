@@ -6,15 +6,18 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     
-    h2, h3{
+    h1, h2{
         font-size: 56px;
         font-weight: 600;
     }
-    h2{
+    h1{
         color: $text-P;
         font-size: 64px;
+    }
+    h2{
+        padding-bottom: 12px;
     }
 }
 

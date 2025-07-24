@@ -13,14 +13,25 @@ import {
 
 export default function Contron() {
     const [productData, setProductData] = useState<ProductData | null>(null);
+    const [downloadCount, setDownloadCount] = useState(0);
+    
     useEffect(() => {
         const fetchProductData = async () => {
-            const response = await fetch("/api/get/review");
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/get/review`);
             const data = await response.json();
             setProductData(data.data[0].contron);
+            setDownloadCount(data.data[0].contron.download);
         };
         fetchProductData();
     }, []);
+
+    const handleDownload = async () => {
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/post/download`, {
+            method: "POST",
+            body: JSON.stringify({ program: "contron" }),
+        });
+        setDownloadCount(downloadCount + 1);
+    };
 
     return (
         <section className="contron">
@@ -37,9 +48,10 @@ export default function Contron() {
                 bodyList={FAST_BROWSER__BODY_LIST}
                 questionList={FAST_BROWSER__QUESTION_LIST}
                 textList={FAST_BROWSER__TEXT_LIST}
-                gifUrl="fast-browser"
+                gifUrl="contron"
                 review={productData?.review || []}
-                download={productData?.download || 0}
+                download={downloadCount}
+                handleDownload={handleDownload}
             />
         </section>
     );
