@@ -19,7 +19,7 @@ export default function Question({
     };
 
     return (
-        <div className="question">
+        <div className="question">  
             {questionList.map((item, index) => (
                 <div
                     className={`question-item ${activeQuestion === index && "active"}`}
