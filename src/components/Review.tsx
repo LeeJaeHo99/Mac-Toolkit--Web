@@ -1,18 +1,67 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { ReviewProps } from "@/types/props";
 import { Send } from "lucide-react";
 
-export default function Review({ review, star, gifUrl }: ReviewProps) {
+interface ReviewData {
+    text: string;
+    star: number;
+}
+
+export default function Review({ review, icon, setStatus }: ReviewProps) {
     const reviewTextRef = useRef<HTMLInputElement>(null);
     const reviewStarRef = useRef<HTMLSelectElement>(null);
+    const [reviewList, setReviewList] = useState<ReviewData[]>([]);
+
+    useEffect(() => {
+        setReviewList(review);
+
+    }, [review]);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        try {
+            e.preventDefault();
+            const reviewText = reviewTextRef.current?.value || "";
+            const reviewStar = Number(reviewStarRef.current?.value) || 0;
+            const reviewData = {
+                text: reviewText,
+                star: reviewStar,
+            };
+
+            if (reviewText === '' || reviewStar === 0) {
+                setStatus?.('error');
+
+                setTimeout(() => {
+                    setStatus?.('');
+                }, 1000);
+                return;
+            }
     
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log(reviewTextRef.current?.value, reviewStarRef.current?.value);
-        console.log('gifUrl: ', gifUrl);
+            await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/post/review`, {
+                method: "POST",
+                body: JSON.stringify({ program: icon, review: reviewData }),
+            });
+    
+            setStatus?.('loading');
+    
+            setTimeout(() => {
+                setStatus?.('success');
+                setReviewList([...reviewList, reviewData]);
+
+                reviewTextRef.current!.value = '';
+                reviewStarRef.current!.value = '0';
+
+                setTimeout(() => {
+                    setStatus?.('');
+                }, 1000);
+            }, 800);
+        } catch (error) {
+            if (error instanceof Error) {
+                setStatus?.('error');
+            }
+        }
     };
 
     return (
@@ -25,11 +74,11 @@ export default function Review({ review, star, gifUrl }: ReviewProps) {
                     required
                 >
                     <option value="0">Select Star</option>
-                    <option value="1">★☆☆☆☆</option>
-                    <option value="2">★★☆☆☆</option>
-                    <option value="3">★★★☆☆</option>
-                    <option value="4">★★★★☆</option>
                     <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
                 </select>
                 <input
                     type="text"
@@ -42,7 +91,7 @@ export default function Review({ review, star, gifUrl }: ReviewProps) {
                 </button>
             </form>
             <div className="row">
-                {review.map((item) => (
+                {reviewList.map((item) => (
                     <div
                         className="review-card"
                         key={`${item.star}-${item.text}`}
@@ -59,7 +108,10 @@ export default function Review({ review, star, gifUrl }: ReviewProps) {
                                     alt="star"
                                 />
                             </div>
-                            <div className="stars">{star}</div>
+                            <div className="stars">
+                                {Array(item.star).fill("★").join("")}
+                                {Array(5 - item.star).fill("☆").join("")}
+                            </div>
                         </div>
                         <p className="card-text">{item.text}</p>
                     </div>

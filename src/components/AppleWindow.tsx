@@ -1,8 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import { AppleWindowProps, AppleWindowItemProps } from "@/types/props";
 import Table from "./Table";
 import Question from "./Question";
 import Preview from "./Preview";
 import Review from "./Review";
+import Notification from "./Notification";
 
 export default function AppleWindow({
     activeTab,
@@ -12,11 +16,14 @@ export default function AppleWindow({
     textList,
     gifUrl,
     review,
-    star,
+    icon,
     handleCloseActiveTab,
 }: AppleWindowProps) {
+    const [status, setStatus] = useState("");
+
     return (
         <div className="apple-window">
+            <Notification notification={status} />
             <div className="apple-window-header">
                 <div className="r" onClick={handleCloseActiveTab}></div>
                 <div className="y" onClick={handleCloseActiveTab}></div>
@@ -31,7 +38,8 @@ export default function AppleWindow({
                     textList={textList}
                     gifUrl={gifUrl}
                     review={review}
-                    star={star}
+                    icon={icon}
+                    setStatus={setStatus}
                 />
             </div>
         </div>
@@ -46,7 +54,8 @@ function AppleWindowItem({
     textList,
     gifUrl,
     review,
-    star,
+    icon,
+    setStatus,
 }: AppleWindowItemProps) {
     return (
         <div className="apple-window-body-item">
@@ -55,7 +64,13 @@ function AppleWindowItem({
                 <Table headerList={headerList} bodyList={bodyList} />
             )}
             {activeTab === 2 && <Question questionList={questionList} />}
-            {activeTab === 3 && <Review review={review} star={star} gifUrl={gifUrl}/>}
+            {activeTab === 3 && (
+                <Review
+                    review={review}
+                    icon={icon}
+                    setStatus={setStatus}
+                />
+            )}
         </div>
     );
 }

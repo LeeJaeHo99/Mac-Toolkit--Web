@@ -37,7 +37,7 @@ export default function PhotoManager() {
         <section className="photo-manager">
                 <SubTitle title="Photo Manager" subTitle="for your Mac" right/>
                 <Product
-                    icon="photo_manager"
+                    icon="photoManager"
                     name="Photo Manager"
                     text="Photo your Mac"
                     headerList={FAST_BROWSER__HEADER_LIST}

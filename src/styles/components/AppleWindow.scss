@@ -1,6 +1,7 @@
 @use '../common/color' as *;
 
 .apple-window{
+    position: relative;
     width: 80%;
     height: auto;
     margin: 0 auto;

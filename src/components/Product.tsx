@@ -63,7 +63,10 @@ export default function Product({
                     <Button
                         text="Download"
                         className="download"
-                        onClick={handleDownload}
+                        onClick={() => {
+                            window.location.href = `/download/${icon}.dmg`;
+                            handleDownload();
+                        }}
                     />
                 </div>
             </div>
@@ -117,6 +120,7 @@ export default function Product({
             </div>
             {activeTab !== -1 && (
                 <AppleWindow
+                    icon={icon}
                     activeTab={activeTab}
                     headerList={headerList}
                     bodyList={bodyList}
@@ -124,7 +128,6 @@ export default function Product({
                     textList={textList}
                     gifUrl={gifUrl}
                     review={review}
-                    star={star}
                     handleCloseActiveTab={handleCloseActiveTab}
                 />
             )}

@@ -25,8 +25,9 @@ export interface AppleWindowProps {
         text: string;
         star: number;
     }[];
-    star: string;
+    icon: string;
     handleCloseActiveTab: () => void;
+    setStatus?: (status: string) => void;
 }
 
 export type AppleWindowItemProps = Omit<AppleWindowProps, "handleCloseActiveTab">;
@@ -61,6 +62,6 @@ export interface ReviewProps {
         text: string;
         star: number;
     }[];
-    star: string;
-    gifUrl: string;
+    icon: string;
+    setStatus?: (status: string) => void;
 }

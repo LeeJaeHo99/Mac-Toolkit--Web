@@ -37,7 +37,7 @@ export default function ScheduleManager() {
         <section className="schedule-manager">
                 <SubTitle title="Schedule Manager" subTitle="for your Mac" />
                 <Product
-                    icon="schedule_manager"
+                    icon="scheduleManager"
                     name="Schedule Manager"
                     text="Schedule your Mac"
                     headerList={FAST_BROWSER__HEADER_LIST}
