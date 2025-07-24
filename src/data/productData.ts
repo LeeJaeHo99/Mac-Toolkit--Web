@@ -40,15 +40,15 @@ export const FAST_BROWSER__BODY_LIST = [
 export const FAST_BROWSER__YOUTUBE_URL = "https://www.youtube.com/embed/QdxQZfC70eg?si=L2gqq_m6SBCGivqi";
 export const FAST_BROWSER__QUESTION_LIST = [
     {
-        title: "How to use",
-        answer: "How to use"
+        title: "Can I change the keyboard shortcuts?",
+        answer: "If this is a feature you'd like to see, feel free to contact us via email — we’re always open to feedback and future improvements!"
     },
     {
-        title: "How to use1",
-        answer: "How to use1"
+        title: "Which browser does Fast Browser use to open links?",
+        answer: "Fast Browser uses your system’s default browser to open all links. You can change your default browser in macOS settings."
     },
     {
-        title: "How to use2",
-        answer: "How to use2"
+        title: "Can I open more than one link at once?",
+        answer: "Links open one at a time using their assigned shortcuts."
     }
 ]

@@ -14,20 +14,8 @@ body{
     margin: 0 auto;
 }
 
-section{
-    padding: 100px 0;
-
-    .inner{
-        flex-direction: column;
-
-        .sub-title{
-            margin-bottom: 80px;
-        }
-    }
-}
-
 .blur-box {
-    background-color: rgb(255 255 255 / 25%);
+    background-color: rgb(94 94 94 / 25%);
     backdrop-filter: blur(4px);
     box-shadow: 0 0 20px 8px rgb(148 132 132 / 19%);
 }

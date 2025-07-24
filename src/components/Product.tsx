@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CircleQuestionMark, Hand, Layers2, Youtube } from "lucide-react";
+import { CircleQuestionMark, Eye, Layers2, Youtube } from "lucide-react";
 import Image from "next/image";
 import Button from "@/ui/Button";
 import AppleWindow from "./AppleWindow";
@@ -10,6 +10,7 @@ import { ProductProps } from "@/types/props";
 
 
 export default function Product({
+    icon,
     name,
     text,
     headerList,
@@ -17,7 +18,7 @@ export default function Product({
     youtubeUrl,
     questionList,
 }: ProductProps) {
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeTab, setActiveTab] = useState(-1);
     const handleActiveTab = (tab: number) => {
         if (activeTab === tab) {
             setActiveTab(4);
@@ -33,7 +34,7 @@ export default function Product({
         <div className="product">
             <div className="icon">
                 <Image
-                    src="/icons/product_logo/fast_browser.png"
+                    src={`/icons/product_logo/${icon}.png`}
                     alt="product"
                     width={140}
                     height={140}
@@ -47,12 +48,12 @@ export default function Product({
             <div className="btn-wrap">
                 <div
                     className={`content-btn ${
-                        activeTab === 0 && "selected how-to-use"
+                        activeTab === 0 && "selected preview"
                     }`}
                     onClick={() => handleActiveTab(0)}
                 >
-                    <Hand />
-                    <span>How to use</span>
+                    <Eye />
+                    <span>Preview</span>
                 </div>
                 <div
                     className={`content-btn ${
@@ -82,7 +83,7 @@ export default function Product({
                     <span>FAQ</span>
                 </div>
             </div>
-            {activeTab !== 4 && (
+            {activeTab !== 4 && activeTab !== -1 && (
                 <AppleWindow
                     activeTab={activeTab}
                     headerList={headerList}

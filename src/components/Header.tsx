@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/ui/Button";
+// import Button from "@/ui/Button";
 
 export default function Header() {
     return (
-        <header>
+        <header className="blur-box">
             <div className="inner">
                 <Link href="/" className="logo">
                     <Image
@@ -15,7 +15,7 @@ export default function Header() {
                     />
                     <h1>Mac Toolkit</h1>
                 </Link>
-                <nav>
+                {/* <nav>
                     <ul>
                         <li>
                             <Link href="/">Apps</Link>
@@ -33,7 +33,7 @@ export default function Header() {
                 </nav>
                 <div className="btn-wrap">
                     <Button text="Login" className="login" />
-                </div>
+                </div> */}
             </div>
         </header>
     );

@@ -16,6 +16,10 @@
             margin-bottom: 60px;
 
             .button-ui{
+                min-width: 120px;
+                max-width: 120px;
+                min-height: 40px;
+                max-height: 40px;
                 padding: 10px 24px;
                 border-radius: 24px;
                 font-family: 'L';
@@ -29,6 +33,21 @@
                     background-color: $text-P;
                     color: $accent-red__hover;
                     border: 1px solid $border-P;
+                }
+            }
+        }
+        section{
+            padding: 100px 0 0;
+        
+            .sub-title{
+                margin-bottom: 80px;
+
+                &.right{
+                    text-align: right;
+
+                    h3{
+                        justify-content: flex-end;
+                    }
                 }
             }
         }

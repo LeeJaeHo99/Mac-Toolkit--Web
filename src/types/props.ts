@@ -26,6 +26,7 @@ export interface AppleWindowProps {
 export type AppleWindowItemProps = Omit<AppleWindowProps, "handleCloseActiveTab">;
 
 export interface ProductProps {
+    icon: string;
     name: string;
     text: string;
     headerList: string[];

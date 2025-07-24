@@ -41,7 +41,7 @@ function AppleWindowItem({
 }: AppleWindowItemProps) {
     return (
         <div className="apple-window-body-item">
-            {activeTab === 0 && <div>How to use</div>}
+            {activeTab === 0 && <div>Preview</div>}
             {activeTab === 1 && (
                 <Table headerList={headerList} bodyList={bodyList} />
             )}
