@@ -1,17 +1,20 @@
+"use client";
 
 export default function Button({
     text,
     className,
     children,
-    onClick,
 }: {
     text: string;
     className?: string;
     children?: React.ReactNode;
-    onClick?: () => void;
 }) {
     return (
-        <button className={`${className} button-ui`} onClick={onClick}>
+        <button className={`${className} button-ui`} onClick={() => {
+            if (className === 'download') {
+                window.location.href = `/download/fastBrowser.dmg`;
+            }
+        }}>
             {text}
             {children}
         </button>

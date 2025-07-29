@@ -18,7 +18,6 @@ export default function Product({
     gifUrl,
     review,
     download,
-    handleDownload,
 }: ProductProps) {
     const [activeTab, setActiveTab] = useState(-1);
     const handleActiveTab = (tab: number) => {
@@ -63,10 +62,6 @@ export default function Product({
                     <Button
                         text="Download"
                         className="download"
-                        onClick={() => {
-                            window.location.href = `/download/${icon}.dmg`;
-                            handleDownload();
-                        }}
                     />
                 </div>
             </div>

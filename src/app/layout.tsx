@@ -3,12 +3,12 @@ import '../styles/style.scss';
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Mac Toolkit",
-  description: "Mac Toolkit",
+  title: "Fast Browser",
+  description: "Fast Browser",
   icons: {
-    icon: "/icons/logo.ico",
-    shortcut: "/icons/logo.ico",
-    apple: "/icons/logo.ico",
+    icon: "/icons/fastBrowser.ico",
+    shortcut: "/icons/fastBrowser.ico",
+    apple: "/icons/fastBrowser.ico",
 },
 };
 
