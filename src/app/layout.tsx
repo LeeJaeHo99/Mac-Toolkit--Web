@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import '../styles/style.scss';
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Fast Browser",
@@ -21,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-        <Footer />
       </body>
     </html>
   );
