@@ -1,0 +1,60 @@
+@media (max-width: 1350px) {
+    .inner {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .disc-text-wrap p.disc-text {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 800px) {
+    .home > div.inner{
+        margin-bottom: 40px;
+    }
+    div.logo-wrap img{
+        width: 100px;
+        height: 100px;
+    }
+    div.title{
+        h1{
+            font-size: 44px;
+        }
+        h2{
+            font-size: 36px;
+        }
+    }
+    div.window-ui{
+        margin-bottom: 100px;
+    }
+    div.disc-text-wrap.mar-b--160{
+        margin-bottom: 80px;
+    } 
+    .disc-text-wrap p.disc-text {
+        font-size: 28px;
+    }
+    img.fast-browser-logo{
+        width: 48px;
+        height: 48px;
+    }
+    .window-ui .apple-window-body-item span.or-text{
+        font-size: 18px;
+    }
+    .window-ui .apple-window-body-item .shortcut-in-window div.shortcut-btn{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    div.window-ui{
+        margin-bottom: 80px;
+    }
+    div.disc-text-wrap.mar-b--160{
+        margin-bottom: 60px;
+    } 
+    .disc-text-wrap p.disc-text {
+        font-size: 24px;
+    }
+}

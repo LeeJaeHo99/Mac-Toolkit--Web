@@ -12,10 +12,17 @@ export default function Button({
     plusDownloadCount?: () => void;
 }) {
     const handleDownload = async () => {
+        // 다운로드 카운트 증가
         await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/post/download`, {
             method: "POST",
             body: JSON.stringify({ program: "fastBrowser" }),
         });
+        
+        // 로그 저장
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/post/log`, {
+            method: "POST",
+        });
+        
         plusDownloadCount?.();
     };
     

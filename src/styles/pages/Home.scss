@@ -1,12 +1,10 @@
 @use '../common/color' as *;
 
 .home{
-    padding-bottom: 100px;
-
     > .inner{
         flex-direction: column;
         justify-content: center;
-
+        margin-bottom: 80px;
 
         .btn-wrap{
             display: flex;

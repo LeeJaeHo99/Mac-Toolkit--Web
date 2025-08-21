@@ -72,17 +72,19 @@
     &-body{
         width: 100%;
         height: auto;
-        padding: 20px 16px;
-        background-color: $bg-E;
+        background-color: $bg-P;
         border: 1px solid $border-P;
-        border-top: none;
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
 
         &-item{
             width: 100%;
             height: auto;
+            padding: 8px 0;
 
+            &:has(.fast-browser-logo){
+                padding: 20px 16px;
+            }
             iframe{
                 min-height: 400px;
             }
