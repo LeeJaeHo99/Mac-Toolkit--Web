@@ -30,7 +30,7 @@ export default function Button({
         <button className={`${className} button-ui`} onClick={() => {
             if (className === 'download') {
                 handleDownload();
-                window.location.href = `/api/download?file=fastBrowser.dmg`;
+                window.location.href = `https://github.com/LeeJaeHo99/Fast-Browser/releases/latest/download/fastBrowser.dmg`;
             }else if (className === 'support') {
                 window.open(`https://buymeacoffee.com/leejaeho`, "_blank");
             }
