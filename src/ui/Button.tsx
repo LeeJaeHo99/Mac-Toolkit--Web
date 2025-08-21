@@ -32,7 +32,7 @@ export default function Button({
                 handleDownload();
                 window.location.href = `/download/fastBrowser.dmg`;
             }else if (className === 'support') {
-                window.open(`https://github.com/LeeJaeHo99/Fast-Browser`, "_blank");
+                window.open(`https://buymeacoffee.com/leejaeho`, "_blank");
             }
         }}>
             {text}
