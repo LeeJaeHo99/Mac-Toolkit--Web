@@ -85,6 +85,9 @@
             &:has(.fast-browser-logo){
                 padding: 20px 16px;
             }
+            &:has(.table){
+                padding: 0;
+            }
             iframe{
                 min-height: 400px;
             }

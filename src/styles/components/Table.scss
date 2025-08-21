@@ -20,12 +20,10 @@
             font-weight: 600;
             
             &:first-child{
-                border-top-left-radius: 8px;
                 border-right: 0.5px solid $border-P;
                 color: $accent-green;
             }
             &:last-child{
-                border-top-right-radius: 8px;
                 color: $accent-yellow;
             }
         }
