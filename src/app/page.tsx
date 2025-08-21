@@ -2,7 +2,6 @@
 
 import { Heart } from "lucide-react";
 import Title from "@/components/Title";
-import ReviewSlider from "@/components/ReviewSlider";
 import Button from "@/ui/Button";
 import Logo from "@/components/Logo";
 import Window from "@/components/Window";
@@ -51,7 +50,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <ReviewSlider />
             <div className="inner">
                 <div className="disc-text-wrap mar-b--160">
                     <p className="disc-text">It’s super easy to use</p>
